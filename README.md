@@ -26,9 +26,11 @@ ch.plot.line(data_frame = 你load進來的資料變數, x_column = '資料欄位
 ch = chartify.Chart(blank_labels=True, x_axis_type='categorical')
 ch.plot.bar(data_frame = 你load進來的資料變數, categorical_columns = '資料欄位', numeric_column = '資料欄位')
 
-### 6. 未實做做完～～ 後續圖表只須看code 並調整自己的資料 帶參數即可
+### 6. 未實做完～～ 後續圖表只須看code 並調整自己的資料 帶參數即可
 
 ## 使用方式
 1. 進入：https://github.com/spotify/chartify/blob/master/examples/Examples.ipynb
-##### 並依照自己的資料選取適當的呈現方式 , 並複製包含ch = chartify.Chart...ch.show('png')
+並依照自己的資料選取適當的呈現方式 , 並複製包含ch = chartify.Chart...ch.show('png')
 ##### 但是由於前面環境 chromedriver加入path問題未解決所以先把'png'先刪除
+2. 資料形式(tidy)：
+##### 須符合首列為欄 , 其餘為值的格式
