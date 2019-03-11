@@ -6,9 +6,27 @@
 4. ``pip3 install pandas``
 5. ``git clone'https://github.com/Kevin8701111/Raise_TW_chartify.git'``
 ## 如何更改參數 
-ch.plot.scatter(data_frame=data,
-        x_column='date',
-        y_column='unit_price')
+### 1. scatter
+ch = chartify.Chart(blank_labels = True, x_axis_type = 'datetime')
+ch.plot.scatter(data_frame = 你load進來的資料變數, x_column = '資料欄位', y_column = '資料欄位')
+### 2. line
+ch = chartify.Chart(blank_labels=True, x_axis_type='datetime')
+ ch.plot.line(data_frame = 你load進來的資料變數, x_column = '資料欄位', y_column = '資料欄位', color_column='fruit')
+### 3. area
+ch = chartify.Chart(blank_labels=True, x_axis_type='datetime')
+ch.plot.area(data_frame = 你load進來的資料變數, x_column = '資料欄位', y_column = '資料欄位', color_column = 'fruit', stacked = True)
+
+### 4. area + line
+ch = chartify.Chart(blank_labels=True, x_axis_type='datetime')
+ch.plot.area(data_frame = 你load進來的資料變數, x_column = '資料欄位', y_column = '資料欄位', second_y_column = '資料欄位')
+ch.style.color_palette.reset_palette_order()
+ch.plot.line(data_frame = 你load進來的資料變數, x_column = '資料欄位', y_column = '資料欄位')
+
+### 5. bar
+ch = chartify.Chart(blank_labels=True, x_axis_type='categorical')
+ch.plot.bar(data_frame = 你load進來的資料變數, categorical_columns = '資料欄位', numeric_column = '資料欄位')
+
+### 6. 未實做做完～～ 後續圖表只須看code 並調整自己的資料 帶參數即可
 
 ## 使用方式
 1. 進入：https://github.com/spotify/chartify/blob/master/examples/Examples.ipynb
